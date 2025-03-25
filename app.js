@@ -8,12 +8,19 @@ dotenv.config();
 connectDB();
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://algo-root-frontend.vercel.app/",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://algo-root-frontend.vercel.app/",
+//     credentials: true,
+//   })
+// );
+
+const corsOptions = {
+  origin: "https://algo-root-frontend.vercel.app", // Update this to match your frontend's origin
+  credentials: true, // This allows cookies to be sent with requests
+};
+
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
