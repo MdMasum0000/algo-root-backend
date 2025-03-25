@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://algo-root-frontend.vercel.app/",
+    origin: "*",
     credentials: true,
   })
 );
