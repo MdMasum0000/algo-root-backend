@@ -16,8 +16,8 @@ app.use(express.json());
 // );
 
 const corsOptions = {
-  origin: "https://algo-root-frontend.vercel.app", // Update this to match your frontend's origin
-  credentials: true, // This allows cookies to be sent with requests
+  origin: "https://algo-root-frontend.vercel.app",
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
